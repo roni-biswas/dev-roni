@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router";
 import { FaBars, FaChevronRight, FaTimes } from "react-icons/fa";
-import ThemeToggle from "../../../components/ThemeToggle";
 import { motion, AnimatePresence } from "framer-motion";
 import BrandLogo from "../../../components/BrandLogo";
 
@@ -61,7 +60,6 @@ const NavBar = () => {
               {/* Logo */}
               <BrandLogo />
               <div className="flex items-center gap-4">
-                <ThemeToggle />
                 <button
                   onClick={onClose}
                   className="text-2xl text-gray-300"
@@ -135,9 +133,7 @@ const NavBar = () => {
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-6">
           {renderLinks()}
-          <div className="-mr-6">
-            <ThemeToggle />
-          </div>
+          <div className="-mr-6"></div>
           <a
             href="/resume.pdf"
             download
@@ -153,7 +149,6 @@ const NavBar = () => {
 
         {/* Right Controls for mobile */}
         <div className="flex items-center gap-4 md:hidden">
-          <ThemeToggle />
           <motion.button
             onClick={() => setIsMenuOpen((prev) => !prev)}
             className="text-2xl text-gray-300"
