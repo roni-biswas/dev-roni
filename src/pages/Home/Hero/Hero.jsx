@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { SiReact, SiNodedotjs, SiTailwindcss, SiExpress } from "react-icons/si";
 import heroImage from "../../../assets/image.png";
 import { FaFacebookF, FaGithub, FaTwitter } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
 
 const ICON_SIZE = 48;
 const RADIUS = 100;
@@ -94,6 +95,22 @@ const Hero = () => {
             transition={{ delay: 1, duration: 0.6 }}
           >
             <a
+              href="https://github.com/roni-biswas"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:text-secondary text-2xl transition-transform transform hover:scale-125"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/roni-biswas"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:text-secondary text-2xl transition-transform transform hover:scale-125"
+            >
+              <FaLinkedin />
+            </a>
+            <a
               href="https://www.facebook.com/roni.biswas.48"
               target="_blank"
               rel="noopener noreferrer"
@@ -108,14 +125,6 @@ const Hero = () => {
               className="text-primary hover:text-secondary text-2xl transition-transform transform hover:scale-125"
             >
               <FaTwitter />
-            </a>
-            <a
-              href="https://github.com/roni-biswas"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:text-secondary text-2xl transition-transform transform hover:scale-125"
-            >
-              <FaGithub />
             </a>
           </motion.div>
         </div>

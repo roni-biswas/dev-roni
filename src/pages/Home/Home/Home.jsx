@@ -3,6 +3,8 @@ import About from "../About/About";
 import Hero from "../Hero/Hero";
 import Skill from "../Skill/Skill";
 import Education from "../Education/Education";
+import Contact from "../Contact/Contact";
+import Footer from "../Footer/Footer";
 
 const Home = () => {
   return (
@@ -11,6 +13,8 @@ const Home = () => {
       <About />
       <Skill />
       <Education />
+      <Contact />
+      <Footer />
     </>
   );
 };
