@@ -71,10 +71,15 @@ const About = () => {
           <h2
             id="about-heading"
             className="text-3xl md:text-5xl font-extrabold text-primary mb-4"
+            data-aos="fade-up"
           >
             About Myself
           </h2>
-          <p className="text-lg md:text-xl font-semibold text-gray-300 max-w-xl">
+          <p
+            className="text-lg md:text-xl font-semibold text-gray-300 max-w-xl"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             Crafting Seamless Web Experiences with Performance, Accessibility,
             and Innovation in Mind
           </p>

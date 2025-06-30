@@ -152,7 +152,7 @@ const Hero = () => {
             const y = ICON_ORBIT_RADIUS * Math.sin(rad);
 
             // Only bounce Tailwind (right) and React (left)
-            const shouldBounce = angle === 0 || angle === 180;
+            // const shouldBounce = angle === 0 || angle === 180;
 
             return (
               <motion.div

@@ -27,12 +27,12 @@ const Skill = () => {
   return (
     <section
       id="skills"
-      className="relative bg-gradient-to-br from-base-300 via-[#1f1f1f] to-base-300 py-20 px-6"
+      className="relative bg-gradient-to-br from-base-300 via-[#1f1f1f] to-base-300 py-20"
     >
       {/* Optional grid pattern overlay */}
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5 pointer-events-none" />
 
-      <div className="relative max-w-6xl mx-auto text-center z-10">
+      <div className="relative max-w-7xl mx-auto px-4 text-center z-10">
         {/* Section Title */}
         <h2
           className="text-4xl md:text-5xl font-bold text-primary mb-4"
