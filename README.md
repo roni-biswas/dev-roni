@@ -47,13 +47,13 @@ Hi, I'm **Roni Biswas**, a dedicated **Full-Stack Developer (MERN)** who enjoys 
 
 ## 📸 Preview
 
-![Portfolio Screenshot](https://i.ibb.co/B2xKk3Xb/Screenshot-43.png)
+![Portfolio Screenshot](https://i.ibb.co/prb9Mmq0/Screenshot-44.png)
 
 ---
 
 ## 📬 Contact Me
 
-- **Email**: roni.biswas.web@gmail.com
+- **Email**: mr.ronibiswas64@gmail.com
 - **GitHub**: [@roni-biswas](https://github.com/roni-biswas)
 - **LinkedIn**: [linkedin.com/in/roni-biswas](https://www.linkedin.com/in/roni-biswas)
 - **WhatsApp**: +8801792552448
