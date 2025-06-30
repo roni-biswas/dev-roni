@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { SiReact, SiNodedotjs, SiTailwindcss, SiExpress } from "react-icons/si";
 import heroImage from "../../../assets/image.png";
+import { FaFacebookF, FaGithub, FaTwitter } from "react-icons/fa6";
 
 const ICON_SIZE = 48;
 const RADIUS = 100;
@@ -26,8 +27,9 @@ const Hero = () => {
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-7xl mx-auto gap-12 pb-24 md:pb-0">
         {/* Left Content */}
         <div className="flex-1 text-center md:text-left mb-12 md:mb-0">
+          {/* Heading */}
           <motion.h2
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4 leading-14"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -35,6 +37,7 @@ const Hero = () => {
             Hi, I'm Roni Biswas <br /> A Full-Stack MERN Developer
           </motion.h2>
 
+          {/* Subtext */}
           <motion.p
             className="text-base sm:text-lg md:text-xl max-w-xl mx-auto md:mx-0 mb-6 text-gray-300"
             initial={{ opacity: 0 }}
@@ -45,6 +48,7 @@ const Hero = () => {
             creativity.
           </motion.p>
 
+          {/* Buttons */}
           <motion.div
             className="flex flex-wrap gap-4 justify-center md:justify-start"
             initial="hidden"
@@ -61,7 +65,7 @@ const Hero = () => {
           >
             <motion.a
               href="#portfolio"
-              className="bg-orange-500 hover:bg-secondary text-white px-6 py-2 rounded-full shadow transition"
+              className="bg-primary hover:bg-secondary hover:text-primary text-white font-semibold px-6 py-2 rounded-full shadow transition"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },
@@ -72,7 +76,7 @@ const Hero = () => {
             <motion.a
               href="/resume.pdf"
               download
-              className="border border-orange-500 hover:bg-accent dark:hover:bg-orange-600 hover:text-white text-orange-500 px-6 py-2 rounded-full transition"
+              className="border border-primary hover:bg-primary hover:text-white text-primary font-semibold px-6 py-2 rounded-full transition"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },
@@ -80,6 +84,39 @@ const Hero = () => {
             >
               Download Resume
             </motion.a>
+          </motion.div>
+
+          {/* Social Icons */}
+          <motion.div
+            className="flex gap-4 justify-center md:justify-start mt-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1, duration: 0.6 }}
+          >
+            <a
+              href="https://www.facebook.com/roni.biswas.48"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:text-secondary text-2xl transition-transform transform hover:scale-125"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href="https://x.com/ronibiswas64"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:text-secondary text-2xl transition-transform transform hover:scale-125"
+            >
+              <FaTwitter />
+            </a>
+            <a
+              href="https://github.com/roni-biswas"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:text-secondary text-2xl transition-transform transform hover:scale-125"
+            >
+              <FaGithub />
+            </a>
           </motion.div>
         </div>
 
@@ -128,8 +165,8 @@ const Hero = () => {
                   marginTop: -ICON_SIZE / 2,
                 }}
                 animate={{
-                  x: [x, x - 15, x - 5, x],
-                  y: [y, y - 15, y - 5, y],
+                  x: [x, x - 15, x + 10, x],
+                  y: [y, y - 15, y - 10, y],
                 }}
                 transition={{
                   duration: 2,

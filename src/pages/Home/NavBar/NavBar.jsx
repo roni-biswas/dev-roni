@@ -14,7 +14,6 @@ const NavBar = () => {
     { name: "Contact", path: "/contact" },
   ];
 
-  // renderLinks takes optional className to add to links
   const renderLinks = (className = "") =>
     navLinks.map((link) => (
       <NavLink
@@ -25,12 +24,11 @@ const NavBar = () => {
           `relative px-4 py-2 rounded transition-all duration-300 ${className} group ${
             isActive
               ? "text-primary font-semibold"
-              : "text-gray-700 hover:text-secondary"
+              : "text-gray-700 dark:text-gray-300 hover:text-secondary"
           }`
         }
       >
         <span className="relative z-10">{link.name}</span>
-        {/* Hover underline */}
         <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-secondary transition-all duration-300 group-hover:w-full" />
       </NavLink>
     ));
@@ -48,29 +46,28 @@ const NavBar = () => {
             onClick={onClose}
           />
 
-          {/* Sliding menu from left */}
+          {/* Slide-in Mobile Menu */}
           <motion.nav
-            className="fixed top-0 left-0 h-full w-4/5 max-w-xs bg-base-300 shadow-lg z-50 p-6 flex flex-col"
+            className="fixed top-0 left-0 h-full w-4/5 max-w-xs bg-base-300/95 backdrop-blur-md shadow-xl z-50 p-6 flex flex-col menu-blur"
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
           >
+            {/* Logo + Close */}
             <div className="flex items-center justify-between mb-8">
-              {/* Logo */}
               <BrandLogo />
-              <div className="flex items-center gap-4">
-                <button
-                  onClick={onClose}
-                  className="text-2xl text-gray-300"
-                  aria-label="Close menu"
-                >
-                  <FaTimes />
-                </button>
-              </div>
+              <button
+                onClick={onClose}
+                className="text-2xl text-gray-300"
+                aria-label="Close menu"
+              >
+                <FaTimes />
+              </button>
             </div>
 
-            <ul className="flex flex-col gap-6 flex-grow">
+            {/* Nav Links */}
+            <ul className="flex flex-col gap-6">
               {navLinks.map(({ name, path }) => (
                 <motion.li
                   key={name}
@@ -106,18 +103,21 @@ const NavBar = () => {
               ))}
             </ul>
 
-            {/* Resume Download Button */}
-            <a
-              href="/resume.pdf"
-              download
-              className="mt-8 px-6 py-3 bg-primary text-white rounded-lg font-semibold text-center
-              hover:bg-primary-dark transition-colors duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={onClose}
-            >
-              Resume
-            </a>
+            {/* Resume Button at Bottom */}
+            <div className="mt-auto pt-6 border-t border-white/10">
+              <a
+                href="/resume.pdf"
+                download
+                className="block w-full text-center px-6 py-3 bg-primary text-white rounded-lg font-semibold
+                hover:bg-secondary hover:text-primary transition-colors duration-300 shadow-md focus:outline-none
+                focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={onClose}
+              >
+                Resume
+              </a>
+            </div>
           </motion.nav>
         </>
       )}
@@ -125,20 +125,25 @@ const NavBar = () => {
   );
 
   return (
-    <div className="bg-base-300 shadow-md fixed w-full z-50">
+    <div
+      className="fixed w-full z-50
+    bg-base-300/100
+    md:bg-base-300/70
+    md:backdrop-blur-md
+    shadow-md
+    transition-colors duration-300 ease-in-out"
+    >
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-        {/* Brand */}
         <BrandLogo />
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-6">
           {renderLinks()}
-          <div className="-mr-6"></div>
           <a
             href="/resume.pdf"
             download
             className="ml-6 px-4 py-2 bg-primary text-white rounded-md font-semibold
-            hover:bg-primary-dark transition-colors duration-300 shadow-md
+            hover:bg-secondary hover:text-primary transition-colors duration-300 shadow-md
             focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
             target="_blank"
             rel="noopener noreferrer"
@@ -147,7 +152,7 @@ const NavBar = () => {
           </a>
         </div>
 
-        {/* Right Controls for mobile */}
+        {/* Mobile Menu Toggle */}
         <div className="flex items-center gap-4 md:hidden">
           <motion.button
             onClick={() => setIsMenuOpen((prev) => !prev)}
@@ -161,7 +166,6 @@ const NavBar = () => {
         </div>
       </div>
 
-      {/* Slide-in Mobile Menu - From Left */}
       {/* Mobile Menu */}
       <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
     </div>

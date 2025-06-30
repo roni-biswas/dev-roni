@@ -64,7 +64,7 @@ const About = () => {
     <section
       id="about"
       aria-labelledby="about-heading"
-      className="relative bg-base-300 py-16"
+      className="relative bg-base-300 py-16 overflow-x-hidden"
     >
       <div className="max-w-7xl mx-auto px-4">
         <header className="text-center flex flex-col items-center mb-12">
@@ -100,8 +100,8 @@ const About = () => {
                 key={idx}
                 data-aos="fade-left"
                 data-aos-delay={idx * 150}
-                tabIndex={0}
-                aria-label={`${title} - step ${number}`}
+                data-aos-duration="1000"
+                // aria-label={`${title} - step ${number}`}
                 className="group relative bg-white/80 dark:bg-gray-800/70 backdrop-blur-md rounded-xl shadow-sm p-6 cursor-pointer
     focus:outline-none focus:ring-4 focus:ring-primary/80
     transform transition-transform duration-400 ease-in-out
