@@ -20,7 +20,10 @@ const degToRad = (deg) => (deg * Math.PI) / 180;
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen bg-gray-900 overflow-hidden flex items-center justify-center px-4 sm:px-6 lg:px-12 pt-24 md:py-16">
+    <section
+      id="top"
+      className="relative min-h-screen bg-gray-900 overflow-hidden flex items-center justify-center px-4 sm:px-6 lg:px-12 pt-24 md:py-16"
+    >
       {/* Decorative blurred background */}
       <div className="absolute -top-20 -left-32 w-80 h-80 sm:w-96 sm:h-96 bg-orange-900 rounded-full opacity-30 blur-2xl" />
       <div className="absolute -bottom-20 -right-32 w-80 h-80 sm:w-96 sm:h-96 bg-yellow-900 rounded-full opacity-30 blur-2xl" />
