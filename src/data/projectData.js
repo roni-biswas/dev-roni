@@ -1,5 +1,28 @@
 export const projectData = [
   {
+    id: "athletic",
+    name: "Athletic Event Booking",
+    image: "https://i.ibb.co/XPxF2M1/Screenshot-53.png",
+    stack: [
+      "React",
+      "TailwindCSS",
+      "Firebase",
+      "React Router",
+      "Node",
+      "Express",
+      "JWT",
+      "MongoDB",
+    ],
+    description:
+      "An event booking platform tailored for athletic competitions, allowing users to browse upcoming events, register participants, and manage event logistics in real-time.",
+    live: "https://athletic-event-booking.web.app",
+    github: "https://github.com/roni-biswas/Athletic-Event-Booking",
+    challenges:
+      "Managing form state for multiple event types, validating time-sensitive data entries, and handling real-time updates for booking statuses.",
+    improvements:
+      "Enable user profiles with booking history, add calendar integration, and implement admin dashboard with analytics.",
+  },
+  {
     id: "appstore",
     name: "AppStore Marketplace",
     image: "https://i.ibb.co/B2xKk3Xb/Screenshot-43.png",
