@@ -113,7 +113,7 @@ const NavBar = () => {
             {/* Resume */}
             <div className="mt-auto pt-6 border-t border-white/10">
               <a
-                href="/resume.pdf"
+                href="https://drive.google.com/file/d/1cL092TEbRmOdK8o8GOmgwissVnps8xid/view?usp=sharing"
                 download
                 className="block w-full text-center px-6 py-3 bg-primary text-white rounded-lg font-semibold
                 hover:bg-secondary hover:text-primary transition-colors duration-300 shadow-md focus:outline-none
@@ -156,7 +156,7 @@ const NavBar = () => {
         <div className="hidden md:flex items-center gap-6">
           {renderLinks()}
           <a
-            href="/resume.pdf"
+            href="https://drive.google.com/file/d/1cL092TEbRmOdK8o8GOmgwissVnps8xid/view?usp=sharing"
             download
             className="ml-6 px-4 py-2 bg-primary text-white rounded-md font-semibold
             hover:bg-secondary hover:text-primary transition-colors duration-300 shadow-md

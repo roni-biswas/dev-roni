@@ -4,6 +4,7 @@ import { SiReact, SiNodedotjs, SiTailwindcss, SiExpress } from "react-icons/si";
 import heroImage from "../../../assets/image.png";
 import { FaFacebookF, FaGithub, FaTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
+import { Link } from "react-scroll";
 
 const ICON_SIZE = 48;
 const RADIUS = 100;
@@ -67,24 +68,33 @@ const Hero = () => {
               },
             }}
           >
-            <motion.a
-              href="#portfolio"
-              className="bg-primary hover:bg-secondary hover:text-primary text-white font-semibold px-6 py-2 rounded-full shadow transition"
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
-              }}
+            <Link
+              to="projects"
+              smooth={true}
+              duration={500}
+              offset={-50} // Optional: adjust if you have a fixed header
+              spy={true}
             >
-              View Work
-            </motion.a>
+              <motion.button
+                path="projects"
+                className="bg-primary hover:bg-secondary hover:text-primary text-white font-semibold px-6 py-2 rounded-full shadow transition"
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+              >
+                View Work
+              </motion.button>
+            </Link>
             <motion.a
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1cL092TEbRmOdK8o8GOmgwissVnps8xid/view?usp=sharing"
               download
               className="border border-primary hover:bg-primary hover:text-white text-primary font-semibold px-6 py-2 rounded-full transition"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },
               }}
+              target="_blank"
             >
               Download Resume
             </motion.a>
